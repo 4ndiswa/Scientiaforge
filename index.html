@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScientiaForge | Master Your Next Interview</title>
+    <!-- Import Plus Jakarta Sans and Space Grotesk from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0A192F;
+            --primary-blue: #1E3A8A;
+            --light-blue: #E0F2FE;
+            --accent-blue: #00A8CC;
+            --white: #FFFFFF;
+            --gray-bg: #F8FAFC;
+            --text-dark: #1E293B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4, .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background-color: var(--gray-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-blue);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-blue);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--light-blue);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* Interactive Windows / Grid Section */
+        .windows-section {
+            max-width: 1200px;
+            margin: -4rem auto 4rem auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .windows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .window-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--accent-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .window-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -10px rgba(30, 58, 138, 0.15);
+        }
+
+        .window-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .window-card p {
+            color: #64748B;
+            margin-bottom: 1.5rem;
+        }
+
+        .window-link {
+            font-weight: 600;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light-blue);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="IMG-20261015-WA0052.jpg" alt="ScientiaForge Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us & Mission</a></li>
+                    <li><a href="about.html#team">Meet The Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html" class="cta-btn">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Don't practice on your dream job. Practice here.</h1>
+            <p>ScientiaForge places our advanced AI Interview Simulator at the core of your professional growth, transforming high-stakes anxiety into execution-ready muscle memory.</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="cta-btn">Launch Simulator</a>
+                <a href="faq.html" class="btn-secondary">Learn How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clickable Window Cards -->
+    <div class="windows-section">
+        <div class="windows-grid">
+            <a href="about.html" class="window-card">
+                <div>
+                    <h3>About Us</h3>
+                    <p>Discover the story behind ScientiaForge and our drive to fix the gap between academic theory and practical readiness.</p>
+                </div>
+                <span class="window-link">Explore About Us &rarr;</span>
+            </a>
+
+            <a href="about.html#mission" class="window-card">
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>Learn how we build zero-barrier tools that give everyone a fair, high-confidence shot at their career goals.</p>
+                </div>
+                <span class="window-link">View Our Mission &rarr;</span>
+            </a>
+
+            <a href="about.html#team" class="window-card">
+                <div>
+                    <h3>Meet The Team</h3>
+                    <p>Put faces to the names. Meet the minds building the future of automated, peer-driven career coaching.</p>
+                </div>
+                <span class="window-link">Meet the Team &rarr;</span>
+            </a>
+
+            <a href="faq.html" class="window-card">
+                <div>
+                    <h3>FAQ</h3>
+                    <p>Got questions about the simulator, data privacy, or getting started? Find all the answers you need here.</p>
+                </div>
+                <span class="window-link">Read FAQ &rarr;</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ScientiaForge. Your Career, Forged Right. All rights reserved.</p>
+    </footer>
+
+</body>
+  </html>
+  
