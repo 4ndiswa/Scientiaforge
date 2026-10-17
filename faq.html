@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | ScientiaForge</title>
+    <!-- Import Plus Jakarta Sans and Space Grotesk from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0A192F;
+            --primary-blue: #1E3A8A;
+            --light-blue: #E0F2FE;
+            --accent-blue: #00A8CC;
+            --white: #FFFFFF;
+            --gray-bg: #F8FAFC;
+            --text-dark: #1E293B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background-color: var(--gray-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-blue);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .faq-item h3 {
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            color: #475569;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light-blue);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="IMG-20261015-WA0052.jpg" alt="ScientiaForge Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us & Mission</a></li>
+                    <li><a href="about.html#team">Meet The Team</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about ScientiaForge and the AI Interview Simulator.</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>How does the AI Interview Simulator work?</h3>
+            <p>The simulator recreates real-world interview conditions. It poses industry-specific or behavioral questions, evaluates your answers in real time, and breaks down your performance based on structure, key terminology, and confidence factors.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is ScientiaForge designed for students and entry-level professionals?</h3>
+            <p>Yes! ScientiaForge is built specifically to bridge the gap between education and employment, addressing the exact realities and time constraints faced by modern learners and young professionals.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I add my team photos to the "Meet the Team" page?</h3>
+            <p>In the `about.html` file, find the block marked `class="team-photo-container"`, ensure your image files are in the same folder, and verify the filename is mapped correctly.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is my practice data kept private?</h3>
+            <p>Your practice sessions and performance metrics are secure and designed to help you benchmark your personal progress over time without unwanted third-party data tracking.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ScientiaForge. Your Career, Forged Right. All rights reserved.</p>
+    </footer>
+
+</body>
+  </html>
+  
